@@ -887,7 +887,7 @@ export default function ReservationAndProfile() {
                         <p className="text-xs text-coffee-600 mb-2 line-clamp-1">
                           {order.items.join(' • ')}
                         </p>
-                        <p className="text-sm font-bold text-coffee-900">${order.total.toFixed(2)}</p>
+                        <p className="text-sm font-bold text-coffee-900">₹{order.total}</p>
                       </div>
                     ))}
                   </div>

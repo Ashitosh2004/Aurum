@@ -46,8 +46,8 @@ export default function Footer() {
       <div className="bg-[#c49a2a] text-espresso font-semibold overflow-hidden py-2.5">
         <div className="animate-marquee whitespace-nowrap flex">
           <span className="mx-8 text-sm tracking-wide">
-            FREE DELIVERY ON ORDERS OVER $30 &nbsp;&nbsp;✦&nbsp;&nbsp; USE CODE WELCOME10 FOR 10% OFF &nbsp;&nbsp;✦&nbsp;&nbsp; NEW: ICED MATCHA LATTE NOW AVAILABLE &nbsp;&nbsp;✦&nbsp;&nbsp;
-            FREE DELIVERY ON ORDERS OVER $30 &nbsp;&nbsp;✦&nbsp;&nbsp; USE CODE WELCOME10 FOR 10% OFF &nbsp;&nbsp;✦&nbsp;&nbsp; NEW: ICED MATCHA LATTE NOW AVAILABLE &nbsp;&nbsp;✦&nbsp;&nbsp;
+            FREE DELIVERY ON ORDERS OVER ₹499 &nbsp;&nbsp;✦&nbsp;&nbsp; USE CODE WELCOME10 FOR 10% OFF &nbsp;&nbsp;✦&nbsp;&nbsp; NEW: ICED MATCHA LATTE NOW AVAILABLE &nbsp;&nbsp;✦&nbsp;&nbsp;
+            FREE DELIVERY ON ORDERS OVER ₹499 &nbsp;&nbsp;✦&nbsp;&nbsp; USE CODE WELCOME10 FOR 10% OFF &nbsp;&nbsp;✦&nbsp;&nbsp; NEW: ICED MATCHA LATTE NOW AVAILABLE &nbsp;&nbsp;✦&nbsp;&nbsp;
           </span>
         </div>
       </div>

@@ -250,7 +250,7 @@ export default function CartAndCheckout() {
                             </div>
 
                             <p className="text-sm font-bold text-gold-600 mt-0.5">
-                              ${(item.price * item.quantity).toFixed(2)}
+                              ₹{(item.price * item.quantity)}
                             </p>
 
                             {/* Quantity Controls */}
@@ -273,7 +273,7 @@ export default function CartAndCheckout() {
                                 <Plus className="h-3 w-3" />
                               </button>
                               <span className="text-xs text-muted-foreground ml-auto">
-                                @ ${item.price.toFixed(2)} each
+                                @ ₹{item.price} each
                               </span>
                             </div>
                           </div>
@@ -353,11 +353,11 @@ export default function CartAndCheckout() {
                         <h3 className="text-sm font-semibold text-espresso mb-3">Order Summary</h3>
                         <div className="flex justify-between text-sm">
                           <span className="text-muted-foreground">Subtotal</span>
-                          <span className="font-medium text-espresso">${subtotal.toFixed(2)}</span>
+                          <span className="font-medium text-espresso">₹{subtotal}</span>
                         </div>
                         <div className="flex justify-between text-sm">
                           <span className="text-muted-foreground">Tax (8%)</span>
-                          <span className="font-medium text-espresso">${tax.toFixed(2)}</span>
+                          <span className="font-medium text-espresso">₹{Math.round(tax)}</span>
                         </div>
                         {couponDiscount > 0 && (
                           <motion.div
@@ -369,14 +369,14 @@ export default function CartAndCheckout() {
                               Discount ({couponDiscount}%)
                             </span>
                             <span className="font-medium text-green-600">
-                              -${discountAmount.toFixed(2)}
+                              -₹{Math.round(discountAmount)}
                             </span>
                           </motion.div>
                         )}
                         <div className="border-t border-coffee-200/50 pt-2.5 flex justify-between">
                           <span className="text-base font-bold text-espresso">Total</span>
                           <span className="text-base font-bold text-gold-600">
-                            ${total.toFixed(2)}
+                            ₹{Math.round(total)}
                           </span>
                         </div>
                       </div>
@@ -563,23 +563,23 @@ export default function CartAndCheckout() {
                     <div className="p-4 rounded-xl bg-white/60 border border-coffee-100/50">
                       <div className="flex justify-between text-sm mb-1">
                         <span className="text-muted-foreground">{itemCount} items</span>
-                        <span className="font-medium text-espresso">${subtotal.toFixed(2)}</span>
+                        <span className="font-medium text-espresso">₹{subtotal}</span>
                       </div>
                       <div className="flex justify-between text-sm mb-1">
                         <span className="text-muted-foreground">Tax</span>
-                        <span className="font-medium text-espresso">${tax.toFixed(2)}</span>
+                        <span className="font-medium text-espresso">₹{Math.round(tax)}</span>
                       </div>
                       {couponDiscount > 0 && (
                         <div className="flex justify-between text-sm mb-1">
                           <span className="text-green-600 font-medium">Discount</span>
                           <span className="font-medium text-green-600">
-                            -${discountAmount.toFixed(2)}
+                            -₹{Math.round(discountAmount)}
                           </span>
                         </div>
                       )}
                       <div className="border-t border-coffee-200/50 pt-2 mt-2 flex justify-between">
                         <span className="font-bold text-espresso">Total</span>
-                        <span className="font-bold text-gold-600">${total.toFixed(2)}</span>
+                        <span className="font-bold text-gold-600">₹{Math.round(total)}</span>
                       </div>
                     </div>
 
@@ -755,7 +755,7 @@ export default function CartAndCheckout() {
                     {/* Total Display */}
                     <div className="p-4 rounded-xl bg-white/60 border border-coffee-100/50 flex items-center justify-between">
                       <span className="font-semibold text-espresso">Amount to Pay</span>
-                      <span className="text-xl font-bold text-gold-600">${total.toFixed(2)}</span>
+                      <span className="text-xl font-bold text-gold-600">₹{Math.round(total)}</span>
                     </div>
 
                     <button
@@ -763,7 +763,7 @@ export default function CartAndCheckout() {
                       className="w-full py-3.5 rounded-xl gradient-gold text-white font-bold text-sm tracking-wide shadow-float hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
                     >
                       <LockIcon />
-                      Pay ${total.toFixed(2)}
+                      Pay ₹{Math.round(total)}
                     </button>
 
                     <p className="text-center text-xs text-coffee-400">

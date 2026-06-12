@@ -302,7 +302,7 @@ export default function SearchOverlay() {
                                   </p>
                                 </div>
                                 <span className="shrink-0 text-sm font-bold text-amber-400">
-                                  ${item.price.toFixed(2)}
+                                  ₹{item.price}
                                 </span>
                               </div>
                               {/* Rating row */}
@@ -454,9 +454,7 @@ export default function SearchOverlay() {
                             className="group flex flex-col items-center gap-2 rounded-xl bg-white/5 p-4 transition-colors hover:bg-white/10"
                             onClick={() => handleCategoryClick(category.id)}
                           >
-                            <span className="text-3xl transition-transform group-hover:scale-110">
-                              {category.icon}
-                            </span>
+                            <img src={category.icon} alt={category.name} className="w-10 h-10 object-contain transition-transform group-hover:scale-110" />
                             <span className="text-sm font-medium text-white/70 transition-colors group-hover:text-white">
                               {category.name}
                             </span>
@@ -513,7 +511,7 @@ export default function SearchOverlay() {
                                     <span className="text-xs text-white/60">{item.rating}</span>
                                   </div>
                                   <span className="text-xs font-semibold text-amber-400">
-                                    ${item.price.toFixed(2)}
+                                    ₹{item.price}
                                   </span>
                                 </div>
                               </div>

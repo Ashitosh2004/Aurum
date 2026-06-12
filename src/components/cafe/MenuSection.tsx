@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react';
 import { useCafeStore, MenuItem } from '@/store/cafe-store';
 import { menuItems, categories } from '@/lib/cafe-data';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { Star, Heart, ShoppingCart, Plus, Search, Filter } from 'lucide-react';
 
 type SortOption = 'default' | 'price-asc' | 'price-desc' | 'rating' | 'popularity';
@@ -107,7 +107,7 @@ export default function MenuSection() {
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.25, 0.46, 0.45, 0.94] as const,
       },
     },
     exit: {
@@ -206,7 +206,7 @@ export default function MenuSection() {
                   : 'bg-white text-muted-foreground hover:bg-coffee-50 border border-border hover:border-[#c49a2a]/40'
               }`}
             >
-              <span className="text-base">{category.icon}</span>
+              <img src={category.icon} alt={category.name} className="w-5 h-5 object-contain" />
               {category.name}
             </motion.button>
           );
@@ -284,11 +284,7 @@ export default function MenuSection() {
 
 interface ProductCardProps {
   item: MenuItem;
-  variants: {
-    hidden: { opacity: number; y: number; scale: number };
-    visible: { opacity: number; y: number; scale: number; transition: { duration: number; ease: number[] } };
-    exit: { opacity: number; y: number; scale: number; transition: { duration: number } };
-  };
+  variants: Variants;
   isFavorite: boolean;
   onToggleFavorite: () => void;
   onAddToCart: () => void;
@@ -395,7 +391,7 @@ function ProductCard({ item, variants, isFavorite, onToggleFavorite, onAddToCart
 
           {/* Price */}
           <span className="text-xl font-bold text-[#c49a2a] font-body">
-            ${item.price.toFixed(2)}
+            ₹{item.price}
           </span>
         </div>
 

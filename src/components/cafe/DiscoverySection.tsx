@@ -129,7 +129,7 @@ function TrendingCard({ item, index }: { item: MenuItem; index: number }) {
               <span className="text-xs text-coffee-300">({item.reviews.toLocaleString()})</span>
             </div>
           </div>
-          <span className="text-lg font-bold text-gold-600">${item.price.toFixed(2)}</span>
+          <span className="text-lg font-bold text-gold-600">₹{item.price}</span>
         </div>
         <motion.button
           whileHover={{ scale: 1.03 }}
@@ -183,7 +183,7 @@ function ChefCard({ item, index }: { item: MenuItem; index: number }) {
             <span className="text-xs text-coffee-300">({item.reviews.toLocaleString()} reviews)</span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-xl font-bold text-gold-600">${item.price.toFixed(2)}</span>
+            <span className="text-xl font-bold text-gold-600">₹{item.price}</span>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -251,7 +251,7 @@ function SeasonalCard({ item, index }: { item: MenuItem; index: number }) {
         <h3 className="font-display text-lg font-semibold text-espresso truncate">{item.name}</h3>
         <p className="text-xs text-coffee-500 mt-1 line-clamp-1">{item.description}</p>
         <div className="flex items-center justify-between mt-3">
-          <span className="text-lg font-bold text-amber-700">${item.price.toFixed(2)}</span>
+          <span className="text-lg font-bold text-amber-700">₹{item.price}</span>
           <div className="flex items-center gap-1 text-xs text-amber-600 font-medium">
             <Clock className="w-3.5 h-3.5" />
             <SeasonalCountdown />
@@ -336,7 +336,7 @@ function FavoriteCard({ item, index }: { item: MenuItem; index: number }) {
           <h3 className="font-display text-lg font-bold text-white drop-shadow-md">{item.name}</h3>
           <div className="flex items-center justify-between mt-1">
             <span className="text-sm text-white/90 font-medium">{item.reviews.toLocaleString()} reviews</span>
-            <span className="text-lg font-bold text-gold-400">${item.price.toFixed(2)}</span>
+            <span className="text-lg font-bold text-gold-400">₹{item.price}</span>
           </div>
         </div>
       </div>
@@ -433,7 +433,7 @@ function NewArrivalCard({ item, index }: { item: MenuItem; index: number }) {
             <span className="text-sm font-medium text-coffee-600">{item.rating}</span>
             <span className="text-xs text-coffee-300">({item.reviews.toLocaleString()})</span>
           </div>
-          <span className="text-lg font-bold text-gold-600">${item.price.toFixed(2)}</span>
+          <span className="text-lg font-bold text-gold-600">₹{item.price}</span>
         </div>
         <motion.button
           whileHover={{ scale: 1.03 }}
@@ -474,7 +474,7 @@ function MoodMiniCard({ item, index }: { item: MenuItem; index: number }) {
       <div className="p-3">
         <h4 className="font-display text-base font-semibold text-espresso truncate">{item.name}</h4>
         <div className="flex items-center justify-between mt-2">
-          <span className="text-base font-bold text-gold-600">${item.price.toFixed(2)}</span>
+          <span className="text-base font-bold text-gold-600">₹{item.price}</span>
           <div className="flex items-center gap-1">
             <Star className="w-3 h-3 fill-gold-500 text-gold-500" />
             <span className="text-xs text-coffee-500">{item.rating}</span>
